@@ -29,3 +29,4 @@ def SaveIV(IVdata, name, notes):
     plt.grid(b=False, which='major', color='b', linestyle='--')
     plt.title(notes)
     plt.savefig(str(folder + '/'+ name + '_' + rndm + '.png'))
+    plt.close()
