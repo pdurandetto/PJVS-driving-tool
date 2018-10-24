@@ -4,10 +4,10 @@ import sys
 from numpy import diff
 import Settings
 
-sim= Settings.SIMULATION #global variable set in Main.py, if sim= True then the program is in simulation mode
+sim= Settings.SIMULATION #global variable set in Main.py, if sim= True then the program is in simulation mode, no devices are then required
 
 if not sim:
-    sys.path.insert(0,'C:\\Program Files (x86)\\Active Technologies\\AT-AWG-STUDIO SDK\\Library') #the path where the dll is located
+    sys.path.insert(0,'path') #the path where the ArbStudioSDK.dll is located
     clr.AddReference('ArbStudioSDK') #dll of Active Technologies AT-AWG1104 
 
 from System import Array, Byte, Double, Decimal,UInt32
@@ -18,8 +18,8 @@ if not sim:
 njj_subs_list = Settings.NJJ_SUBSECTIONS_LIST
 n_subs = len(njj_subs_list) # number of subsections is equal to the number of channels minus one, 14 in our case
 
-serials=['LCRY2345I00080','LCRY2345I00081','LCRY2345I00082','LCRY2345I00083'] #LCRY2341I00185 (fifth)
-
+#serials of the AWGs
+serials=['LCRYXXXXXXXX1','LCRYXXXXXXXX2','LCRYXXXXXXXX3','LCRYXXXXXXXX4']
 
 
 masterdev = 1 # from 1 to 4
@@ -292,8 +292,6 @@ def InitVoltmeter(nplc):
         print("Voltmeter not found!!!")
         return("ERR_VOLT")
     
-    
-
 
 def ReadVolt(voltmeter):
     try:
@@ -302,8 +300,6 @@ def ReadVolt(voltmeter):
     except:
         print("Error in voltage reading!!!\n")
         return(0)
-
-    
     
 
 def SetImpedance(*args): 
@@ -360,8 +356,6 @@ def SetImpedance(*args):
         return("ERR_IMP")
     
    
-
-
 
 def SetDCVoltages(device, voltage_array): # generates a dc voltage on the each channel
     
