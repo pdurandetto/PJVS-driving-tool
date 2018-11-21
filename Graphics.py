@@ -1068,7 +1068,7 @@ class PJVS_GUI(Form):
             self.form_IV.Controls.Add(self.form_IV.Rjj)            
             '''
             self.form_IV.in_Rjj = TextBox()
-            self.form_IV.in_Rjj.Text = "0.065" #Ohm
+            self.form_IV.in_Rjj.Text = "0.037" #Ohm 37 mOhm
             '''self.form_IV.in_Rjj.Location = Point(185, 170)
             self.form_IV.in_Rjj.Size = Size(50, 10)
             self.form_IV.in_Rjj.Leave += self.Set_in_Rjj_Format
