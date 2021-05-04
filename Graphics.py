@@ -1795,7 +1795,7 @@ class PJVS_GUI(Form):
             #Bias currents in mA
             self.form_QT.current = Label()
             self.form_QT.current.Text = "Bias currents (mA)"
-            self.form_QT.current.Font = Font("Serif", 11., FontStyle.Bold)
+            self.form_QT.current.Font = Font("Serif", 11.)#, FontStyle.Bold) # don't know why it doesn't work anymore
             self.form_QT.current.BackColor = Color.LightBlue
             self.form_QT.current.Location = Point(40, 140)
             self.form_QT.current.AutoSize = True
