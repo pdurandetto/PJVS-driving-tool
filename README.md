@@ -6,7 +6,7 @@ It consists of three main forms:
 3) quantum-based stepwise voltage synthesis.
 
 # Notes:
-Active-Technologies provides 32-bit DLLs for their AWG-1104 DLL, hence also 32-bit Python version has to be employed.
+Active-Technologies provides 32-bit DLLs for their AWGs, hence also 32-bit Python version has to be employed.
 
 # Reference publications:
 
